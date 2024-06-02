@@ -2,8 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 app.use(express.json());
+require('dotenv').config()
 
-mongoose.connect('mongodb+srv://pulkitjain:5rwetTegaoBbbLtW@cluster0.up6tp1a.mongodb.net/movies')
+mongoose.connect(process.env.A)
 
 const movieSchema = new mongoose.Schema({
     name: {
